@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0" />
+    <title>🐻📺 BearTube</title>
+    <script>
+      function onLoad() {
+          let url= new URL(document.location);
+          let params = new URLSearchParams(url.search);
+          let videoId = params.get("v")
+          if (videoId != null) {
+              const videoDiv = document.querySelector("#videoDiv");
+              videoDiv.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/' + videoId + '?rel=0&iv_load_policy=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+          } else {
+              const introDiv = document.querySelector("#intro");
+              introDiv.style.display = "block";
+          }
+      }
+    </script>
+    <style>
+    </style>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📺</text></svg>">
+  </head>
+  <body onload="onLoad();">
+    <div id="intro" style="display:none;">
+      <h1>🐻📺 BearTube</h1>
+      <p>
+        A "bear"-bones video viewer.
+      </p>
+    </div>
+    <div id="videoDiv">
+    </div>
+  </body>
+</html>
