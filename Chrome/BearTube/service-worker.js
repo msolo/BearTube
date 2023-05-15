@@ -1,9 +1,7 @@
 // We don't need real persistence - a hack will do nicely.
-const BearTubeEnabled = "com.hiredgoons.BearTube.enabled";
-
 const localStorage = {
-    BearTubeEnabled: true,
-    "backgroundColor": "#ff0000",
+    "BearTube.enabled": true,
+    "BearTube.bg-color": "#ff0000",
 };
 
 const filter = {
@@ -16,16 +14,20 @@ const filter = {
 
 
 function redirect(event) {
-    let enabled = localStorage[BearTubeEnabled];
+    let enabled = localStorage["BearTube.enabled"];
     if (!enabled) {
-        console.info("skipping redirect " + event.url);
+        console.info("BearTube skipping redirect " + event.url);
         return;
     }
 
     let params = new URL(event.url).searchParams;
     let id = params.get("v");
-    let url = "https://hiredgoons.com/ytbt?v=" + id;
-    console.info("redirect " + event.url + " -> " + url);
+    if (id == null) {
+        return;
+    }
+
+    let url = "https://msolo.github.io/BearTube/v1/watch.html?v=" + id;
+    console.info("BearTube redirect tab " + event.tabId + " "    + event.url + " -> " + url);
     chrome.tabs.update(event.tabId, { url: url });
 }
 
@@ -40,22 +42,21 @@ chrome.webNavigation.onHistoryStateUpdated.addListener((event) => {
 }, filter);
 
 function init() {
-    localStorage[BearTubeEnabled] = true;
+    localStorage["BearTube.enabled"] = true;
     chrome.browserAction.getBadgeBackgroundColor({}, (color) => {
         // Store the background color. The docs suggest that "null" will return
         // this to the default, but that doesn't seem to work in any browser.
-        localStorage["backgroundColor"] = color;
-        console.info("got background color");
+        localStorage["BearTube.bg-color"] = color;
     });
 }
 
 chrome.runtime.onInstalled.addListener(() => {
-    console.info("com.hiredgoons.BearTube installed");
+    console.info("BearTube installed");
     init();
 });
 
 chrome.runtime.onStartup.addListener(() => {
-    console.info("com.hiredgoons.BearTube started");
+    console.info("BearTube started");
     init();
 });
 
@@ -63,12 +64,12 @@ chrome.runtime.onStartup.addListener(() => {
 
 
 function toggleEnabled(tab) {
-    let newState = !localStorage[BearTubeEnabled];
-    localStorage[BearTubeEnabled] = newState;
+    let newState = !localStorage["BearTube.enabled"];
+    localStorage["BearTube.enabled"] = newState;
     let color = "#000000";
     let text = "off";
     if (newState) {
-        color = localStorage["backgroundColor"];
+        color = localStorage["BearTube.bg-color"];
         text = "";
     }
 
@@ -77,7 +78,7 @@ function toggleEnabled(tab) {
     chrome.browserAction.setBadgeText(
         { text: text });
 
-    console.info("com.hiredgoons.BearTube toggled: " + newState);
+    console.info("BearTube toggled: " + newState);
 }
 
 chrome.browserAction.onClicked.addListener((tab) => {

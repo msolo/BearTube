@@ -33,13 +33,40 @@ function redirect(event) {
         return;
     }
     let url = "https://msolo.github.io/BearTube/v1/watch.html?v=" + id;
-    console.info("BearTube redirect " + event.url + " -> " + url);
-    browser.tabs.update(event.tabId, { url: url });
+    console.info("BearTube redirect tab " + event.tabId + " "    + event.url + " -> " + url);
+
+    // When a link is pasted into the Safari omnibox, tabId and frameId are unset.
+    // This is a bug, but we can "guess" that it's the current tab. We might be
+    // wrong if people are switching things around very quickly, but given the
+    // upstream bug, there isn't much that can be done in the extension.
+    // Chrome gets this right.
+    if (event.tabId != 0) {
+        browser.tabs.update(event.tabId, { url: url });
+    } else {
+        browser.tabs.getCurrent((tab) => {
+            browser.tabs.update(tab.id, {url: url});
+        })
+    }
 }
 
 browser.webNavigation.onBeforeNavigate.addListener((event) => {
     redirect(event);
 }, filter);
+
+//browser.webNavigation.onCommitted.addListener((event) => {
+//    console.info("onCommitted");
+//    console.table(event);
+//}, filter);
+
+//browser.webNavigation.onCompleted.addListener((event) => {
+//    console.info("onCompleted");
+//    console.table(event);
+//}, filter);
+
+//browser.webNavigation.onDOMContentLoaded.addListener((event) => {
+//    console.info("onDOMContentLoaded");
+//    console.table(event);
+//}, filter);
 
 browser.runtime.onInstalled.addListener(() => {
     console.info("BearTube installed");
