@@ -32,11 +32,9 @@
 		2763AE972A05B275008BC9F4 /* SafariWebExtensionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2763AE4F2A05B274008BC9F4 /* SafariWebExtensionHandler.m */; };
 		2763AE982A05B275008BC9F4 /* SafariWebExtensionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2763AE4F2A05B274008BC9F4 /* SafariWebExtensionHandler.m */; };
 		2763AEAE2A05B275008BC9F4 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAA2A05B275008BC9F4 /* images */; };
-		2763AEAF2A05B275008BC9F4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAB2A05B275008BC9F4 /* README.md */; };
 		2763AEB02A05B275008BC9F4 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAC2A05B275008BC9F4 /* manifest.json */; };
 		2763AEB12A05B275008BC9F4 /* service-worker.js in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAD2A05B275008BC9F4 /* service-worker.js */; };
 		2763AEB22A05B275008BC9F4 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAA2A05B275008BC9F4 /* images */; };
-		2763AEB32A05B275008BC9F4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAB2A05B275008BC9F4 /* README.md */; };
 		2763AEB42A05B275008BC9F4 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAC2A05B275008BC9F4 /* manifest.json */; };
 		2763AEB52A05B275008BC9F4 /* service-worker.js in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAD2A05B275008BC9F4 /* service-worker.js */; };
 /* End PBXBuildFile section */
@@ -115,7 +113,6 @@
 		2763AE892A05B275008BC9F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2763AE8A2A05B275008BC9F4 /* BearTube.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BearTube.entitlements; sourceTree = "<group>"; };
 		2763AEAA2A05B275008BC9F4 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = Resources/images; sourceTree = "<group>"; };
-		2763AEAB2A05B275008BC9F4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2763AEAC2A05B275008BC9F4 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
 		2763AEAD2A05B275008BC9F4 /* service-worker.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = "service-worker.js"; path = "Resources/service-worker.js"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,7 +152,6 @@
 		2763AE3E2A05B272008BC9F4 = {
 			isa = PBXGroup;
 			children = (
-				2763AEAB2A05B275008BC9F4 /* README.md */,
 				2763AE432A05B273008BC9F4 /* Shared (App) */,
 				2763AE4D2A05B274008BC9F4 /* Shared (Extension) */,
 				2763AE562A05B275008BC9F4 /* iOS (App) */,
@@ -417,7 +413,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2763AEB52A05B275008BC9F4 /* service-worker.js in Resources */,
-				2763AEB32A05B275008BC9F4 /* README.md in Resources */,
 				2763AEB42A05B275008BC9F4 /* manifest.json in Resources */,
 				2763AEB22A05B275008BC9F4 /* images in Resources */,
 			);
@@ -428,7 +423,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2763AEB12A05B275008BC9F4 /* service-worker.js in Resources */,
-				2763AEAF2A05B275008BC9F4 /* README.md in Resources */,
 				2763AEB02A05B275008BC9F4 /* manifest.json in Resources */,
 				2763AEAE2A05B275008BC9F4 /* images in Resources */,
 			);

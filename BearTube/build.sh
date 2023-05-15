@@ -10,6 +10,9 @@ xcodebuild -derivedDataPath ./Build -project BearTube.xcodeproj -scheme "BearTub
 # CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 xcodebuild -derivedDataPath ./Build -project BearTube.xcodeproj -scheme "BearTube (macOS)" build -configuration release
 
+version=$(jq -r .version "Shared (Extension)/Resources/manifest.json")
+
 cd ./Build/Products/Release
-zip -9ry BearTube.zip BearTube.app
-shasum -a 256 BearTube.zip > BearTube.zip.sha256
+
+zip -9ry BearTube-$version.zip BearTube.app
+shasum -a 256 BearTube-$version.zip > BearTube-$version.zip.sha256

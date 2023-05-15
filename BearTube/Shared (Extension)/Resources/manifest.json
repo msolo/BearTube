@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "permissions": [
     "browserAction",
-    "webNavigation",
+    "webNavigation"
   ],
   "name": "BearTube",
   "description": "A classic, quiet Youtube.",
