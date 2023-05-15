@@ -1,0 +1,952 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2763AE592A05B275008BC9F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2763AE582A05B275008BC9F4 /* AppDelegate.m */; };
+		2763AE5C2A05B275008BC9F4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2763AE5B2A05B275008BC9F4 /* SceneDelegate.m */; };
+		2763AE5F2A05B275008BC9F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2763AE5D2A05B275008BC9F4 /* LaunchScreen.storyboard */; };
+		2763AE622A05B275008BC9F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2763AE602A05B275008BC9F4 /* Main.storyboard */; };
+		2763AE652A05B275008BC9F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2763AE642A05B275008BC9F4 /* main.m */; };
+		2763AE6E2A05B275008BC9F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2763AE6D2A05B275008BC9F4 /* AppDelegate.m */; };
+		2763AE712A05B275008BC9F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2763AE6F2A05B275008BC9F4 /* Main.storyboard */; };
+		2763AE742A05B275008BC9F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2763AE732A05B275008BC9F4 /* main.m */; };
+		2763AE7B2A05B275008BC9F4 /* BearTube Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2763AE7A2A05B275008BC9F4 /* BearTube Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2763AE852A05B275008BC9F4 /* BearTube Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2763AE842A05B275008BC9F4 /* BearTube Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2763AE8B2A05B275008BC9F4 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 2763AE452A05B273008BC9F4 /* Main.html */; };
+		2763AE8C2A05B275008BC9F4 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 2763AE452A05B273008BC9F4 /* Main.html */; };
+		2763AE8D2A05B275008BC9F4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2763AE472A05B273008BC9F4 /* Icon.png */; };
+		2763AE8E2A05B275008BC9F4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2763AE472A05B273008BC9F4 /* Icon.png */; };
+		2763AE8F2A05B275008BC9F4 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 2763AE482A05B273008BC9F4 /* Style.css */; };
+		2763AE902A05B275008BC9F4 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 2763AE482A05B273008BC9F4 /* Style.css */; };
+		2763AE912A05B275008BC9F4 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 2763AE492A05B273008BC9F4 /* Script.js */; };
+		2763AE922A05B275008BC9F4 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 2763AE492A05B273008BC9F4 /* Script.js */; };
+		2763AE932A05B275008BC9F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2763AE4B2A05B273008BC9F4 /* ViewController.m */; };
+		2763AE942A05B275008BC9F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2763AE4B2A05B273008BC9F4 /* ViewController.m */; };
+		2763AE952A05B275008BC9F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2763AE4C2A05B274008BC9F4 /* Assets.xcassets */; };
+		2763AE962A05B275008BC9F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2763AE4C2A05B274008BC9F4 /* Assets.xcassets */; };
+		2763AE972A05B275008BC9F4 /* SafariWebExtensionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2763AE4F2A05B274008BC9F4 /* SafariWebExtensionHandler.m */; };
+		2763AE982A05B275008BC9F4 /* SafariWebExtensionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2763AE4F2A05B274008BC9F4 /* SafariWebExtensionHandler.m */; };
+		2763AEAE2A05B275008BC9F4 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAA2A05B275008BC9F4 /* images */; };
+		2763AEAF2A05B275008BC9F4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAB2A05B275008BC9F4 /* README.md */; };
+		2763AEB02A05B275008BC9F4 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAC2A05B275008BC9F4 /* manifest.json */; };
+		2763AEB12A05B275008BC9F4 /* service-worker.js in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAD2A05B275008BC9F4 /* service-worker.js */; };
+		2763AEB22A05B275008BC9F4 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAA2A05B275008BC9F4 /* images */; };
+		2763AEB32A05B275008BC9F4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAB2A05B275008BC9F4 /* README.md */; };
+		2763AEB42A05B275008BC9F4 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAC2A05B275008BC9F4 /* manifest.json */; };
+		2763AEB52A05B275008BC9F4 /* service-worker.js in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAD2A05B275008BC9F4 /* service-worker.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2763AE7C2A05B275008BC9F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2763AE3F2A05B272008BC9F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2763AE792A05B275008BC9F4;
+			remoteInfo = "BearTube Extension (iOS)";
+		};
+		2763AE862A05B275008BC9F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2763AE3F2A05B272008BC9F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2763AE832A05B275008BC9F4;
+			remoteInfo = "BearTube Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2763AE9E2A05B275008BC9F4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2763AE7B2A05B275008BC9F4 /* BearTube Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2763AEA52A05B275008BC9F4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2763AE852A05B275008BC9F4 /* BearTube Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2763AE462A05B273008BC9F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		2763AE472A05B273008BC9F4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		2763AE482A05B273008BC9F4 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		2763AE492A05B273008BC9F4 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		2763AE4A2A05B273008BC9F4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2763AE4B2A05B273008BC9F4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2763AE4C2A05B274008BC9F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2763AE4E2A05B274008BC9F4 /* SafariWebExtensionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafariWebExtensionHandler.h; sourceTree = "<group>"; };
+		2763AE4F2A05B274008BC9F4 /* SafariWebExtensionHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafariWebExtensionHandler.m; sourceTree = "<group>"; };
+		2763AE542A05B275008BC9F4 /* BearTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BearTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2763AE572A05B275008BC9F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2763AE582A05B275008BC9F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2763AE5A2A05B275008BC9F4 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		2763AE5B2A05B275008BC9F4 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		2763AE5E2A05B275008BC9F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2763AE612A05B275008BC9F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2763AE632A05B275008BC9F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2763AE642A05B275008BC9F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2763AE6A2A05B275008BC9F4 /* BearTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BearTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2763AE6C2A05B275008BC9F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2763AE6D2A05B275008BC9F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2763AE702A05B275008BC9F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2763AE722A05B275008BC9F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2763AE732A05B275008BC9F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2763AE752A05B275008BC9F4 /* BearTube.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BearTube.entitlements; sourceTree = "<group>"; };
+		2763AE7A2A05B275008BC9F4 /* BearTube Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BearTube Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2763AE7F2A05B275008BC9F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2763AE842A05B275008BC9F4 /* BearTube Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BearTube Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2763AE892A05B275008BC9F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2763AE8A2A05B275008BC9F4 /* BearTube.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BearTube.entitlements; sourceTree = "<group>"; };
+		2763AEAA2A05B275008BC9F4 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = Resources/images; sourceTree = "<group>"; };
+		2763AEAB2A05B275008BC9F4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2763AEAC2A05B275008BC9F4 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
+		2763AEAD2A05B275008BC9F4 /* service-worker.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = "service-worker.js"; path = "Resources/service-worker.js"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2763AE512A05B275008BC9F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2763AE672A05B275008BC9F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2763AE772A05B275008BC9F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2763AE812A05B275008BC9F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2763AE3E2A05B272008BC9F4 = {
+			isa = PBXGroup;
+			children = (
+				2763AEAB2A05B275008BC9F4 /* README.md */,
+				2763AE432A05B273008BC9F4 /* Shared (App) */,
+				2763AE4D2A05B274008BC9F4 /* Shared (Extension) */,
+				2763AE562A05B275008BC9F4 /* iOS (App) */,
+				2763AE6B2A05B275008BC9F4 /* macOS (App) */,
+				2763AE7E2A05B275008BC9F4 /* iOS (Extension) */,
+				2763AE882A05B275008BC9F4 /* macOS (Extension) */,
+				2763AE552A05B275008BC9F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2763AE432A05B273008BC9F4 /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				2763AE4A2A05B273008BC9F4 /* ViewController.h */,
+				2763AE4B2A05B273008BC9F4 /* ViewController.m */,
+				2763AE4C2A05B274008BC9F4 /* Assets.xcassets */,
+				2763AE442A05B273008BC9F4 /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		2763AE442A05B273008BC9F4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2763AE452A05B273008BC9F4 /* Main.html */,
+				2763AE472A05B273008BC9F4 /* Icon.png */,
+				2763AE482A05B273008BC9F4 /* Style.css */,
+				2763AE492A05B273008BC9F4 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2763AE4D2A05B274008BC9F4 /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				2763AEA92A05B275008BC9F4 /* Resources */,
+				2763AE4E2A05B274008BC9F4 /* SafariWebExtensionHandler.h */,
+				2763AE4F2A05B274008BC9F4 /* SafariWebExtensionHandler.m */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		2763AE552A05B275008BC9F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2763AE542A05B275008BC9F4 /* BearTube.app */,
+				2763AE6A2A05B275008BC9F4 /* BearTube.app */,
+				2763AE7A2A05B275008BC9F4 /* BearTube Extension.appex */,
+				2763AE842A05B275008BC9F4 /* BearTube Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2763AE562A05B275008BC9F4 /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				2763AE572A05B275008BC9F4 /* AppDelegate.h */,
+				2763AE582A05B275008BC9F4 /* AppDelegate.m */,
+				2763AE5A2A05B275008BC9F4 /* SceneDelegate.h */,
+				2763AE5B2A05B275008BC9F4 /* SceneDelegate.m */,
+				2763AE5D2A05B275008BC9F4 /* LaunchScreen.storyboard */,
+				2763AE602A05B275008BC9F4 /* Main.storyboard */,
+				2763AE632A05B275008BC9F4 /* Info.plist */,
+				2763AE642A05B275008BC9F4 /* main.m */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		2763AE6B2A05B275008BC9F4 /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				2763AE6C2A05B275008BC9F4 /* AppDelegate.h */,
+				2763AE6D2A05B275008BC9F4 /* AppDelegate.m */,
+				2763AE6F2A05B275008BC9F4 /* Main.storyboard */,
+				2763AE722A05B275008BC9F4 /* Info.plist */,
+				2763AE732A05B275008BC9F4 /* main.m */,
+				2763AE752A05B275008BC9F4 /* BearTube.entitlements */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		2763AE7E2A05B275008BC9F4 /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				2763AE7F2A05B275008BC9F4 /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		2763AE882A05B275008BC9F4 /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				2763AE892A05B275008BC9F4 /* Info.plist */,
+				2763AE8A2A05B275008BC9F4 /* BearTube.entitlements */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		2763AEA92A05B275008BC9F4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2763AEAA2A05B275008BC9F4 /* images */,
+				2763AEAC2A05B275008BC9F4 /* manifest.json */,
+				2763AEAD2A05B275008BC9F4 /* service-worker.js */,
+			);
+			name = Resources;
+			path = "Shared (Extension)";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2763AE532A05B275008BC9F4 /* BearTube (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2763AE9F2A05B275008BC9F4 /* Build configuration list for PBXNativeTarget "BearTube (iOS)" */;
+			buildPhases = (
+				2763AE502A05B275008BC9F4 /* Sources */,
+				2763AE512A05B275008BC9F4 /* Frameworks */,
+				2763AE522A05B275008BC9F4 /* Resources */,
+				2763AE9E2A05B275008BC9F4 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2763AE7D2A05B275008BC9F4 /* PBXTargetDependency */,
+			);
+			name = "BearTube (iOS)";
+			productName = "BearTube (iOS)";
+			productReference = 2763AE542A05B275008BC9F4 /* BearTube.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2763AE692A05B275008BC9F4 /* BearTube (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2763AEA62A05B275008BC9F4 /* Build configuration list for PBXNativeTarget "BearTube (macOS)" */;
+			buildPhases = (
+				2763AE662A05B275008BC9F4 /* Sources */,
+				2763AE672A05B275008BC9F4 /* Frameworks */,
+				2763AE682A05B275008BC9F4 /* Resources */,
+				2763AEA52A05B275008BC9F4 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2763AE872A05B275008BC9F4 /* PBXTargetDependency */,
+			);
+			name = "BearTube (macOS)";
+			productName = "BearTube (macOS)";
+			productReference = 2763AE6A2A05B275008BC9F4 /* BearTube.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2763AE792A05B275008BC9F4 /* BearTube Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2763AE9B2A05B275008BC9F4 /* Build configuration list for PBXNativeTarget "BearTube Extension (iOS)" */;
+			buildPhases = (
+				2763AE762A05B275008BC9F4 /* Sources */,
+				2763AE772A05B275008BC9F4 /* Frameworks */,
+				2763AE782A05B275008BC9F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BearTube Extension (iOS)";
+			productName = "BearTube Extension (iOS)";
+			productReference = 2763AE7A2A05B275008BC9F4 /* BearTube Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		2763AE832A05B275008BC9F4 /* BearTube Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2763AEA22A05B275008BC9F4 /* Build configuration list for PBXNativeTarget "BearTube Extension (macOS)" */;
+			buildPhases = (
+				2763AE802A05B275008BC9F4 /* Sources */,
+				2763AE812A05B275008BC9F4 /* Frameworks */,
+				2763AE822A05B275008BC9F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BearTube Extension (macOS)";
+			productName = "BearTube Extension (macOS)";
+			productReference = 2763AE842A05B275008BC9F4 /* BearTube Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2763AE3F2A05B272008BC9F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					2763AE532A05B275008BC9F4 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					2763AE692A05B275008BC9F4 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					2763AE792A05B275008BC9F4 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					2763AE832A05B275008BC9F4 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 2763AE422A05B272008BC9F4 /* Build configuration list for PBXProject "BearTube" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2763AE3E2A05B272008BC9F4;
+			productRefGroup = 2763AE552A05B275008BC9F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2763AE532A05B275008BC9F4 /* BearTube (iOS) */,
+				2763AE692A05B275008BC9F4 /* BearTube (macOS) */,
+				2763AE792A05B275008BC9F4 /* BearTube Extension (iOS) */,
+				2763AE832A05B275008BC9F4 /* BearTube Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2763AE522A05B275008BC9F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2763AE8D2A05B275008BC9F4 /* Icon.png in Resources */,
+				2763AE5F2A05B275008BC9F4 /* LaunchScreen.storyboard in Resources */,
+				2763AE8B2A05B275008BC9F4 /* Main.html in Resources */,
+				2763AE912A05B275008BC9F4 /* Script.js in Resources */,
+				2763AE952A05B275008BC9F4 /* Assets.xcassets in Resources */,
+				2763AE622A05B275008BC9F4 /* Main.storyboard in Resources */,
+				2763AE8F2A05B275008BC9F4 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2763AE682A05B275008BC9F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2763AE8E2A05B275008BC9F4 /* Icon.png in Resources */,
+				2763AE902A05B275008BC9F4 /* Style.css in Resources */,
+				2763AE712A05B275008BC9F4 /* Main.storyboard in Resources */,
+				2763AE922A05B275008BC9F4 /* Script.js in Resources */,
+				2763AE962A05B275008BC9F4 /* Assets.xcassets in Resources */,
+				2763AE8C2A05B275008BC9F4 /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2763AE782A05B275008BC9F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2763AEB52A05B275008BC9F4 /* service-worker.js in Resources */,
+				2763AEB32A05B275008BC9F4 /* README.md in Resources */,
+				2763AEB42A05B275008BC9F4 /* manifest.json in Resources */,
+				2763AEB22A05B275008BC9F4 /* images in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2763AE822A05B275008BC9F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2763AEB12A05B275008BC9F4 /* service-worker.js in Resources */,
+				2763AEAF2A05B275008BC9F4 /* README.md in Resources */,
+				2763AEB02A05B275008BC9F4 /* manifest.json in Resources */,
+				2763AEAE2A05B275008BC9F4 /* images in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2763AE502A05B275008BC9F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2763AE592A05B275008BC9F4 /* AppDelegate.m in Sources */,
+				2763AE652A05B275008BC9F4 /* main.m in Sources */,
+				2763AE932A05B275008BC9F4 /* ViewController.m in Sources */,
+				2763AE5C2A05B275008BC9F4 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2763AE662A05B275008BC9F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2763AE942A05B275008BC9F4 /* ViewController.m in Sources */,
+				2763AE742A05B275008BC9F4 /* main.m in Sources */,
+				2763AE6E2A05B275008BC9F4 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2763AE762A05B275008BC9F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2763AE972A05B275008BC9F4 /* SafariWebExtensionHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2763AE802A05B275008BC9F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2763AE982A05B275008BC9F4 /* SafariWebExtensionHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2763AE7D2A05B275008BC9F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2763AE792A05B275008BC9F4 /* BearTube Extension (iOS) */;
+			targetProxy = 2763AE7C2A05B275008BC9F4 /* PBXContainerItemProxy */;
+		};
+		2763AE872A05B275008BC9F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2763AE832A05B275008BC9F4 /* BearTube Extension (macOS) */;
+			targetProxy = 2763AE862A05B275008BC9F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2763AE452A05B273008BC9F4 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2763AE462A05B273008BC9F4 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		2763AE5D2A05B275008BC9F4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2763AE5E2A05B275008BC9F4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2763AE602A05B275008BC9F4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2763AE612A05B275008BC9F4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2763AE6F2A05B275008BC9F4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2763AE702A05B275008BC9F4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2763AE992A05B275008BC9F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		2763AE9A2A05B275008BC9F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+			};
+			name = Release;
+		};
+		2763AE9C2A05B275008BC9F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "BearTube Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiredgoons.BearTube.Extension;
+				PRODUCT_NAME = "BearTube Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2763AE9D2A05B275008BC9F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "BearTube Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiredgoons.BearTube.Extension;
+				PRODUCT_NAME = "BearTube Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2763AEA02A05B275008BC9F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = BearTube;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiredgoons.BearTube;
+				PRODUCT_NAME = BearTube;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2763AEA12A05B275008BC9F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = BearTube;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiredgoons.BearTube;
+				PRODUCT_NAME = BearTube;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2763AEA32A05B275008BC9F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/BearTube.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K95PCKP5T4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "BearTube Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiredgoons.BearTube.Extension;
+				PRODUCT_NAME = "BearTube Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		2763AEA42A05B275008BC9F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/BearTube.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K95PCKP5T4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "BearTube Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiredgoons.BearTube.Extension;
+				PRODUCT_NAME = "BearTube Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		2763AEA72A05B275008BC9F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/BearTube.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K95PCKP5T4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = BearTube;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiredgoons.BearTube;
+				PRODUCT_NAME = BearTube;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		2763AEA82A05B275008BC9F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/BearTube.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K95PCKP5T4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = BearTube;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiredgoons.BearTube;
+				PRODUCT_NAME = BearTube;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2763AE422A05B272008BC9F4 /* Build configuration list for PBXProject "BearTube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2763AE992A05B275008BC9F4 /* Debug */,
+				2763AE9A2A05B275008BC9F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2763AE9B2A05B275008BC9F4 /* Build configuration list for PBXNativeTarget "BearTube Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2763AE9C2A05B275008BC9F4 /* Debug */,
+				2763AE9D2A05B275008BC9F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2763AE9F2A05B275008BC9F4 /* Build configuration list for PBXNativeTarget "BearTube (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2763AEA02A05B275008BC9F4 /* Debug */,
+				2763AEA12A05B275008BC9F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2763AEA22A05B275008BC9F4 /* Build configuration list for PBXNativeTarget "BearTube Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2763AEA32A05B275008BC9F4 /* Debug */,
+				2763AEA42A05B275008BC9F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2763AEA62A05B275008BC9F4 /* Build configuration list for PBXNativeTarget "BearTube (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2763AEA72A05B275008BC9F4 /* Debug */,
+				2763AEA82A05B275008BC9F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2763AE3F2A05B272008BC9F4 /* Project object */;
+}
