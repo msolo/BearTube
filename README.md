@@ -1,3 +1,5 @@
+![Banner](BearTube/icons/icon-64.svg)
+
 # BearTube
 
 BearTube is a small browser extension to make the drive-by YouTube experience more 2005 than 2020. It puts the video front and center, adhering to the design ethos best expressed by Terry Tate - "condense the nonesense". However, if you visit youtube.com directly and use the site the plugin won't modify any of the viewing pages.
@@ -5,7 +7,11 @@ BearTube is a small browser extension to make the drive-by YouTube experience mo
 # Installation
 
 ## macOS
-Download from GitHub and run the application once. You may get a warning from Gatekeeper about having to trust an "unknown" developer.
+Download the application from GitHub and run the application once.
+
+[BearTube.zip](https://github.com/msolo/BearTube/releases/download/v1.0.0/BearTube-1.0.0.zip)
+
+You may get a warning from Gatekeeper about having to trust an "unknown" developer.
 
 The application will tell you to open Safari's preferences to explicitly enable the plugin, which must be done manually for security and inconvenience.
 
@@ -13,12 +19,9 @@ The application will tell you to open Safari's preferences to explicitly enable 
 
 For now, the easiest thing (for various definitions of "easy") is to compile the project yourself and self-sign so you can install it via USB on your iOS devices.
 
-Good luck.
-
 ## Chrome
 
-`Chrome/BearTube` is an unpacked Chrome extension which can be easily installed in Chrome from chrome://extensions.
-
+The unpacked plugin can also be manually installed from the source in [`Chrome/BearTube`](Chrome/BearTube). You may have to visit chrome://extensions and enter Developer Mode to do this.
 
 
 # Using BearTube
