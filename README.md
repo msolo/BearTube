@@ -9,7 +9,7 @@ BearTube is a small browser extension to make the drive-by YouTube experience mo
 ## macOS
 Download the application from GitHub and run the application once.
 
-[BearTube.zip](https://github.com/msolo/BearTube/releases/download/v1.0.1/BearTube-1.0.1.zip)
+[BearTube.zip](https://github.com/msolo/BearTube/releases/download/v1.0.2/BearTube-1.0.2.zip)
 
 You may get a warning from Gatekeeper about having to trust an "unknown" developer.
 
