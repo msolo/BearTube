@@ -9,6 +9,10 @@ const filter = {
         {
             urlMatches: 'youtube.com/watch',
         },
+        {
+            // https://youtu.be/wBd1tS5Ptmk
+            hostEquals: 'youtu.be',
+        },
     ],
 };
 
@@ -27,24 +31,31 @@ function redirect(event) {
         return;
     }
 
-    let params = new URL(event.url).searchParams;
-    let id = params.get("v");
+    let url = new URL(event.url);
+    let id = null;
+    if (url.hostname == "youtu.be") {
+        id = url.pathname.substring(1);
+    }
+    if (id == null) {
+        id = url.searchParams.get("v");
+    }
     if (id == null) {
         return;
     }
-    let url = "https://msolo.github.io/BearTube/v1/watch.html?v=" + id;
-    console.info("BearTube redirect tab " + event.tabId + " "    + event.url + " -> " + url);
+    let dstUrl = "https://msolo.github.io/BearTube/v1/watch.html?v=" + id;
+    console.info("BearTube redirect tab " + event.tabId + " "    + event.url + " -> " + dstUrl);
 
+    // Safari Bug:
     // When a link is pasted into the Safari omnibox, tabId and frameId are unset.
     // This is a bug, but we can "guess" that it's the current tab. We might be
     // wrong if people are switching things around very quickly, but given the
     // upstream bug, there isn't much that can be done in the extension.
     // Chrome gets this right.
     if (event.tabId != 0) {
-        browser.tabs.update(event.tabId, { url: url });
+        browser.tabs.update(event.tabId, { url: dstUrl });
     } else {
         browser.tabs.getCurrent((tab) => {
-            browser.tabs.update(tab.id, {url: url});
+            browser.tabs.update(tab.id, {url: dstUrl});
         })
     }
 }
@@ -53,10 +64,12 @@ browser.webNavigation.onBeforeNavigate.addListener((event) => {
     redirect(event);
 }, filter);
 
-//browser.webNavigation.onCommitted.addListener((event) => {
-//    console.info("onCommitted");
-//    console.table(event);
-//}, filter);
+browser.webNavigation.onCommitted.addListener((event) => {
+    // Safari Bug:
+    // In the case of youtu.be links, there onBeforeNavigation is not fired.
+    // This works as expected on Chrome.
+    redirect(event);
+}, filter);
 
 //browser.webNavigation.onCompleted.addListener((event) => {
 //    console.info("onCompleted");

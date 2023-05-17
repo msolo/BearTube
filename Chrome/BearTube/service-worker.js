@@ -9,6 +9,10 @@ const filter = {
         {
             urlMatches: 'youtube.com/watch',
         },
+        {
+            // https://youtu.be/wBd1tS5Ptmk
+            hostEquals: 'youtu.be',
+        },
     ],
 };
 
@@ -20,15 +24,21 @@ function redirect(event) {
         return;
     }
 
-    let params = new URL(event.url).searchParams;
-    let id = params.get("v");
+    let url = new URL(event.url);
+    let id = null;
+    if (url.hostname == "youtu.be") {
+        id = url.pathname.substring(1);
+    }
+    if (id == null) {
+        id = url.searchParams.get("v");
+    }
     if (id == null) {
         return;
     }
 
-    let url = "https://msolo.github.io/BearTube/v1/watch.html?v=" + id;
-    console.info("BearTube redirect tab " + event.tabId + " "    + event.url + " -> " + url);
-    chrome.tabs.update(event.tabId, { url: url });
+    let dstUrl = "https://msolo.github.io/BearTube/v1/watch.html?v=" + id;
+    console.info("BearTube redirect tab " + event.tabId + " "    + event.url + " -> " + dstUrl);
+    chrome.tabs.update(event.tabId, { url: dstUrl });
 }
 
 chrome.webNavigation.onBeforeNavigate.addListener((event) => {
@@ -59,8 +69,6 @@ chrome.runtime.onStartup.addListener(() => {
     console.info("BearTube started");
     init();
 });
-
-
 
 
 function toggleEnabled(tab) {
