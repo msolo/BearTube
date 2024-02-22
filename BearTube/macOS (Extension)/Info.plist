@@ -4,6 +4,16 @@
 <dict>
 	<key>NSExtension</key>
 	<dict>
+		<key>SFSafariWebsiteAccess</key>
+		<dict>
+			<key>Level</key>
+			<string>Some</string>
+			<key>Allowed Domains</key>
+			<array>
+				<string>youtube.com</string>
+				<string>*.youtube.com</string>
+			</array>
+		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.Safari.web-extension</string>
 		<key>NSExtensionPrincipalClass</key>
