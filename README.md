@@ -7,13 +7,14 @@ BearTube is a small browser extension to make the drive-by YouTube experience mo
 # Installation
 
 ## macOS
-Download the application from GitHub and run the application once.
 
-[BearTube.zip](https://github.com/msolo/BearTube/releases/download/v1.0.2/BearTube-1.0.2.zip)
+Thie is more difficult than many applications due to Apple's security theatre. Follow carefully, you may have to improvise because Apple makes changes to the permission process that are out of my control.
 
-You may get a warning from Gatekeeper about having to trust an "unknown" developer.
-
-The application will tell you to open Safari's preferences to explicitly enable the plugin, which must be done manually for security and inconvenience.
+1. Download the application from this link [BearTube.zip](https://github.com/msolo/BearTube/releases/download/v1.0.3/BearTube-1.0.3.zip).
+2. Go to the `Downloads` folder and right click on the BearTube application. Select `Open`. You must launch the application this way. You will get a dialog box asking if you want to allow running the unsigned, untrusted code - yes. You want to do that.
+3. If you see the application load, it will give you a button to quit it and launch Safari's Extension panel instead. It doesn't always work so you may need to go to the Safari Preferences, find the section called `Extentsions` and enable the checkbox next to BearTube.
+4. This might still be not enough. Visit youtube.com. You should see a tv icon next to the location bar, if it is not glowing blue, you need to click on the tv icon and select `Always allow on youtube.com`.
+5. Click on a youtube video link - it should take you to a giant version of the video with nothing else. 
 
 ## iOS
 
