@@ -14,7 +14,9 @@ Thie is more difficult than many applications due to Apple's security theatre. F
 2. Go to the `Downloads` folder and right click on the BearTube application. Select `Open`. You must launch the application this way. You will get a dialog box asking if you want to allow running the unsigned, untrusted code - yes. You want to do that.
 3. If you see the application load, it will give you a button to quit it and launch Safari's Extension panel instead. It doesn't always work so you may need to go to the Safari Preferences, find the section called `Extentsions` and enable the checkbox next to BearTube.
 4. This might still be not enough. Visit youtube.com. You should see a tv icon next to the location bar, if it is not glowing blue, you need to click on the tv icon and select `Always allow on youtube.com`.
-5. Click on a youtube video link - it should take you to a giant version of the video with nothing else. 
+5. Paste in a link to a youtube video - it should take you to a giant version of the video with nothing else.
+
+NOTE: Due to a bug in how Safari extensions work, clicking on links on Youtube itself often causes fail to activate the plugin. You often have to reload the page with `Command-R`. Sometimes this can even happen with other links. Unfortunately, it seems completely out of my control since the plugin code never gets triggered.
 
 ## iOS
 
