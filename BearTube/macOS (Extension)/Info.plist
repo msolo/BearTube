@@ -12,6 +12,7 @@
 			<array>
 				<string>youtube.com</string>
 				<string>*.youtube.com</string>
+				<string>youtu.be</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
