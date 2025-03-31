@@ -1,37 +1,90 @@
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0" />
-    <title>🐻📺 BearTube</title>
-    <script>
-      function onLoad() {
-          let url= new URL(document.location);
-          let params = new URLSearchParams(url.search);
-          let videoId = params.get("v")
-          if (videoId != null) {
-              const videoDiv = document.querySelector("#videoDiv");
-              videoDiv.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/' + videoId + '?rel=0&iv_load_policy=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-          } else {
-              const introDiv = document.querySelector("#intro");
-              introDiv.style.display = "block";
-          }
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0" />
+  <title>🐻📺 BearTube</title>
+  <script>
+    function onLoad() {
+      let url = new URL(document.location);
+      let params = new URLSearchParams(url.search);
+      let videoId = params.get("v")
+      let fixRel = false;
+
+      if (videoId == null) {
+        videoId = params.get("vx");
+        fixRel = true;
       }
-    </script>
-    <style>
-body {
-  margin:0;
-}
-    </style>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📺</text></svg>">
-  </head>
-  <body onload="onLoad();">
-    <div id="intro" style="display:none;">
-      <h1>🐻📺 BearTube</h1>
-      <p>
-        A "bear"-bones video viewer.
-      </p>
-    </div>
-    <div id="videoDiv">
-    </div>
-  </body>
+
+      if (videoId != null) {
+        const videoDiv = document.querySelector("#videoDiv");
+        videoDiv.innerHTML = `<iframe style="width: 100%; height: 95dvh;"
+        src="https://www.youtube-nocookie.com/embed/${videoId}?rel=0&iv_load_policy=3"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>`;
+      }
+
+      if (fixRel) {
+        // This is some wacky iOS bullshit right here. Without a canonical link,
+        // the iOS share panel with silently replace this URL with a URL pointing
+        // at youtube.com - this is so incredibly fishy that it's really quite shocking.
+        let link = document.createElement('link');
+        link.setAttribute('rel', 'canonical');
+        link.setAttribute('href', url);
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+
+      let oembedUrl = "https://www.youtube-nocookie.com/oembed?url=http%3A//youtube.com/watch%3Fv%3D" + videoId + "&format=json";
+      let videoMetadata = {};
+      fetch(oembedUrl)
+        .then(response => response.json())
+        .then(data => {
+          // You can now work with the JSON data
+          videoMetadata = data;
+          const videoMeta = document.querySelector("#videoMeta");
+          videoMeta.innerHTML = `<p style="margin:0; padding:0.5em;">
+  <a href="https://www.youtube.com/watch?v=${videoId}&yt=1">View Full Page</a>
+  <span style="float:right; text-align:right;">
+    Posted by: <a href="${videoMetadata["author_url"]}">${videoMetadata["author_name"]}</a>
+  </span>
+</p>`;
+          document.title = "🐻📺 " + videoMetadata["title"];
+        })
+        .catch(error => {
+          console.error('Error loading JSON:', error);
+        });
+    }
+  </script>
+  <style>
+    html {
+      overflow-x: hidden;
+      max-width: 100dvw;
+      height: 100dvh;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    #videoMeta {
+      height: 5dvh;
+    }
+
+    #videoDiv {
+      height: 95dvh;
+    }
+  </style>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📺</text></svg>">
+</head>
+
+<body onload="onLoad();">
+  <div id="videoMeta">
+  </div>
+  <div id="videoDiv">
+  </div>
+</body>
+
 </html>
