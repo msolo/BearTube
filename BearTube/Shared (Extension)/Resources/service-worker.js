@@ -4,6 +4,11 @@ const localStorage = {
     "BearTube.bg-color": "#ff0000",
 };
 
+function btDebug(msg) {
+  return;
+  console.info(msg);
+}
+
 const filter = {
     url: [
         {
@@ -17,6 +22,8 @@ const filter = {
 };
 
 function init() {
+    btDebug("BearTube init");
+
     browser.browserAction.getBadgeBackgroundColor({}, (color) => {
         // Store the background color. The docs suggest that "null" will return
         // this to the default, but that doesn't seem to work in any browser.
@@ -25,6 +32,7 @@ function init() {
 }
 
 function redirect(event) {
+    btDebug("BearTube redirect");
     let enabled = localStorage["BearTube.enabled"];
     if (!enabled) {
         console.info("BearTube skipping redirect " + event.url);
@@ -32,6 +40,10 @@ function redirect(event) {
     }
 
     let url = new URL(event.url);
+    if (url.searchParams.get("yt") == "1") {
+      // This is our signal we *really* want all of yt.
+      return;
+    }
     let id = null;
     if (url.hostname == "youtu.be") {
         id = url.pathname.substring(1);
@@ -42,8 +54,9 @@ function redirect(event) {
     if (id == null) {
         return;
     }
-    let dstUrl = "https://msolo.github.io/BearTube/v1/watch.html?v=" + id;
-    console.info("BearTube redirect tab " + event.tabId + " "    + event.url + " -> " + dstUrl);
+
+    let dstUrl = "http://beartube.hiredgoons.com/v1/watch.html?v=" + id;
+    btDebug("BearTube redirect tab " + event.tabId + " " + event.url + " -> " + dstUrl);
 
     // Safari Bug:
     // When a link is pasted into the Safari omnibox, tabId and frameId are unset.
@@ -61,33 +74,35 @@ function redirect(event) {
 }
 
 browser.webNavigation.onBeforeNavigate.addListener((event) => {
+    btDebug("BearTube beforeNavigate");
     redirect(event);
 }, filter);
 
 browser.webNavigation.onCommitted.addListener((event) => {
+    btDebug("BearTube onCommitted");
     // Safari Bug:
     // In the case of youtu.be links, there onBeforeNavigation is not fired.
     // This works as expected on Chrome.
     redirect(event);
 }, filter);
 
-//browser.webNavigation.onCompleted.addListener((event) => {
-//    console.info("onCompleted");
-//    console.table(event);
-//}, filter);
+browser.webNavigation.onCompleted.addListener((event) => {
+    btDebug("BearTube onCompleted");
+    console.table(event);
+}, filter);
 
-//browser.webNavigation.onDOMContentLoaded.addListener((event) => {
-//    console.info("onDOMContentLoaded");
-//    console.table(event);
-//}, filter);
+browser.webNavigation.onDOMContentLoaded.addListener((event) => {
+    btDebug("BearTube onDOMContentLoaded");
+    console.table(event);
+}, filter);
 
 browser.runtime.onInstalled.addListener(() => {
-    console.info("BearTube installed");
+    btDebug("BearTube installed");
     init();
 });
 
 browser.runtime.onStartup.addListener(() => {
-    console.info("BearTube started");
+    btDebug("BearTube started");
     init();
 });
 

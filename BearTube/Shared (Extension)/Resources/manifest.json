@@ -6,7 +6,7 @@
   ],
   "name": "BearTube",
   "description": "A classic, quiet Youtube.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "icons": {
     "48": "images/icon-48.png",
     "128": "images/icon-128.png"
@@ -18,5 +18,13 @@
   "background": {
     "scripts": ["service-worker.js"],
     "persistent": false
-  }
+  },
+  "content_scripts": [{
+    "js": [ "content.js" ],
+    "matches": [
+      "*://*.youtube.com/*",
+      "*://youtu.be/*",
+      "*://youtube.com/*"
+    ]
+  }]
 }

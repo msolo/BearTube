@@ -10,6 +10,7 @@
 			<string>Some</string>
 			<key>Allowed Domains</key>
 			<array>
+				<string>m.youtube.com</string>
 				<string>youtube.com</string>
 				<string>*.youtube.com</string>
 				<string>youtu.be</string>
