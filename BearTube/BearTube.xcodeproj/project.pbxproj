@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		274CE9182D99CC490011344E /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 274CE9172D99CC490011344E /* content.js */; };
-		274CE9192D99CC490011344E /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 274CE9172D99CC490011344E /* content.js */; };
 		2763AE592A05B275008BC9F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2763AE582A05B275008BC9F4 /* AppDelegate.m */; };
 		2763AE5C2A05B275008BC9F4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2763AE5B2A05B275008BC9F4 /* SceneDelegate.m */; };
 		2763AE5F2A05B275008BC9F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2763AE5D2A05B275008BC9F4 /* LaunchScreen.storyboard */; };
@@ -39,6 +37,8 @@
 		2763AEB22A05B275008BC9F4 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAA2A05B275008BC9F4 /* images */; };
 		2763AEB42A05B275008BC9F4 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAC2A05B275008BC9F4 /* manifest.json */; };
 		2763AEB52A05B275008BC9F4 /* service-worker.js in Resources */ = {isa = PBXBuildFile; fileRef = 2763AEAD2A05B275008BC9F4 /* service-worker.js */; };
+		27ECA0702DA1F6D600EB7672 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 27ECA06F2DA1F6D600EB7672 /* content.js */; };
+		27ECA0712DA1F6D600EB7672 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 27ECA06F2DA1F6D600EB7672 /* content.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +84,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		274CE9172D99CC490011344E /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
 		274CE91A2D9A150A0011344E /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		2763AE462A05B273008BC9F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
 		2763AE472A05B273008BC9F4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -119,6 +118,7 @@
 		2763AEAA2A05B275008BC9F4 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = Resources/images; sourceTree = "<group>"; };
 		2763AEAC2A05B275008BC9F4 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
 		2763AEAD2A05B275008BC9F4 /* service-worker.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = "service-worker.js"; path = "Resources/service-worker.js"; sourceTree = "<group>"; };
+		27ECA06F2DA1F6D600EB7672 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = Resources/content.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,7 +258,7 @@
 		2763AEA92A05B275008BC9F4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				274CE9172D99CC490011344E /* content.js */,
+				27ECA06F2DA1F6D600EB7672 /* content.js */,
 				2763AEAA2A05B275008BC9F4 /* images */,
 				2763AEAC2A05B275008BC9F4 /* manifest.json */,
 				2763AEAD2A05B275008BC9F4 /* service-worker.js */,
@@ -420,10 +420,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				274CE9182D99CC490011344E /* content.js in Resources */,
 				2763AEB52A05B275008BC9F4 /* service-worker.js in Resources */,
 				2763AEB42A05B275008BC9F4 /* manifest.json in Resources */,
 				2763AEB22A05B275008BC9F4 /* images in Resources */,
+				27ECA0712DA1F6D600EB7672 /* content.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,10 +431,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				274CE9192D99CC490011344E /* content.js in Resources */,
 				2763AEB12A05B275008BC9F4 /* service-worker.js in Resources */,
 				2763AEB02A05B275008BC9F4 /* manifest.json in Resources */,
 				2763AEAE2A05B275008BC9F4 /* images in Resources */,
+				27ECA0702DA1F6D600EB7672 /* content.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

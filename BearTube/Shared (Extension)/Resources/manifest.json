@@ -16,15 +16,21 @@
     "default_title": "Enable/disable BearTube"
   },
   "background": {
-    "scripts": ["service-worker.js"],
+    "scripts": [
+      "service-worker.js"
+    ],
     "persistent": false
   },
-  "content_scripts": [{
-    "js": [ "content.js" ],
-    "matches": [
-      "*://*.youtube.com/*",
-      "*://youtu.be/*",
-      "*://youtube.com/*"
-    ]
-  }]
+  "content_scripts": [
+    {
+      "js": [
+        "content.js"
+      ],
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://youtu.be/*",
+        "*://youtube.com/*"
+      ]
+    }
+  ]
 }

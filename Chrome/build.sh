@@ -1,6 +1,7 @@
 #!/bin/bash
 
-
+echo "No longer working in Chrome without some sort of special signing that seems poorly documented."
+exit 1
 
 set -o pipefail
 set -eux

@@ -4,11 +4,6 @@ const localStorage = {
     "BearTube.bg-color": "#ff0000",
 };
 
-function btDebug(msg) {
-  return;
-  console.info(msg);
-}
-
 const filter = {
     url: [
         {
@@ -21,9 +16,15 @@ const filter = {
     ],
 };
 
+function btDebug(msg) {
+    return;
+    console.info(msg);
+}
+
 function init() {
     btDebug("BearTube init");
 
+    localStorage["BearTube.enabled"] = true;
     browser.browserAction.getBadgeBackgroundColor({}, (color) => {
         // Store the background color. The docs suggest that "null" will return
         // this to the default, but that doesn't seem to work in any browser.
@@ -41,8 +42,8 @@ function redirect(event) {
 
     let url = new URL(event.url);
     if (url.searchParams.get("yt") == "1") {
-      // This is our signal we *really* want all of yt.
-      return;
+        // This is our signal we *really* want all of yt.
+        return;
     }
     let id = null;
     if (url.hostname == "youtu.be") {
@@ -68,7 +69,7 @@ function redirect(event) {
         browser.tabs.update(event.tabId, { url: dstUrl });
     } else {
         browser.tabs.getCurrent((tab) => {
-            browser.tabs.update(tab.id, {url: dstUrl});
+            browser.tabs.update(tab.id, { url: dstUrl });
         })
     }
 }

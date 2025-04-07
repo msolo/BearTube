@@ -7,10 +7,10 @@ var btObserveUrlChange = () => {
   const observer = new MutationObserver(mutations => {
     if (oldHref !== document.location.href) {
       oldHref = document.location.href;
-//      console.log(
-//                  `observer change location: ${document.location}`,
-//                  );
-      if (document.location.pathname == "/watch" ) {
+      //      console.log(
+      //                  `observer change location: ${document.location}`,
+      //                  );
+      if (document.location.pathname == "/watch") {
         let url = new URL(document.location.href);
         if (url.searchParams.get("yt") == "1") {
           console.log("BearTube skip reset location: ", l);

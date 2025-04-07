@@ -4,6 +4,8 @@ const localStorage = {
     "BearTube.bg-color": "#ff0000",
 };
 
+var loadFull = false;
+
 const filter = {
     url: [
         {
@@ -16,8 +18,30 @@ const filter = {
     ],
 };
 
+function btDebug(msg) {
+    return;
+    console.info(msg);
+}
+
+function init() {
+    btDebug("BearTube init");
+
+    localStorage["BearTube.enabled"] = true;
+
+    chrome.action.getBadgeBackgroundColor({}, (color) => {
+        // Store the background color. The docs suggest that "null" will return
+        // this to the default, but that doesn't seem to work in any browser.
+        localStorage["BearTube.bg-color"] = color;
+    });
+
+    chrome.action.onClicked.addListener(async (tab) => {
+        toggleEnabled(tab);
+    });
+}
 
 function redirect(event) {
+    btDebug("BearTube redirect");
+    loadFull = false;
     let enabled = localStorage["BearTube.enabled"];
     if (!enabled) {
         console.info("BearTube skipping redirect " + event.url);
@@ -25,6 +49,12 @@ function redirect(event) {
     }
 
     let url = new URL(event.url);
+    if (url.searchParams.get("yt") == "1") {
+        // This is our signal we *really* want all of yt.
+        btDebug("BearTube loading full YouTube: " + event.url);
+        loadFull = true;
+        return;
+    }
     let id = null;
     if (url.hostname == "youtu.be") {
         id = url.pathname.substring(1);
@@ -36,37 +66,33 @@ function redirect(event) {
         return;
     }
 
-    let dstUrl = "https://msolo.github.io/BearTube/v1/watch.html?v=" + id;
-    console.info("BearTube redirect tab " + event.tabId + " "    + event.url + " -> " + dstUrl);
+    let dstUrl = "http://beartube.hiredgoons.com/v1/watch.html?v=" + id;
+    btDebug("BearTube redirect tab " + event.tabId + " " + event.url + " -> " + dstUrl);
     chrome.tabs.update(event.tabId, { url: dstUrl });
 }
 
 chrome.webNavigation.onBeforeNavigate.addListener((event) => {
+    btDebug("BearTube beforeNavigate: " + event.url);
     redirect(event);
 }, filter);
 
 chrome.webNavigation.onHistoryStateUpdated.addListener((event) => {
+    btDebug("BearTube onHistoryStateUpdated: " + event.url + " loadfull:" + loadFull);
     // Links on youtube.com send this message instead.
-    // console.info("onHistoryStateUpdated: " + event.url);
+    // We have to ignore if we are trying to actually load the onsite version.
+    if (loadFull) {
+        return;
+    }
     redirect(event);
 }, filter);
 
-function init() {
-    localStorage["BearTube.enabled"] = true;
-    chrome.browserAction.getBadgeBackgroundColor({}, (color) => {
-        // Store the background color. The docs suggest that "null" will return
-        // this to the default, but that doesn't seem to work in any browser.
-        localStorage["BearTube.bg-color"] = color;
-    });
-}
-
 chrome.runtime.onInstalled.addListener(() => {
-    console.info("BearTube installed");
+    btDebug("BearTube installed");
     init();
 });
 
 chrome.runtime.onStartup.addListener(() => {
-    console.info("BearTube started");
+    btDebug("BearTube started");
     init();
 });
 
@@ -88,7 +114,3 @@ function toggleEnabled(tab) {
 
     console.info("BearTube toggled: " + newState);
 }
-
-chrome.browserAction.onClicked.addListener((tab) => {
-    toggleEnabled(tab);
-});
