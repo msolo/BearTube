@@ -24,7 +24,7 @@ This is a security "feature" and cannot be automated.
 
 ## Chrome
 
-The unpacked plugin can be manually installed from the source in [`Chrome/BearTube`](https://github.com/msolo/BearTube/Chrome/BearTube). You may have to visit [chrome://extensions](chrome://extensions) and enter Developer Mode to do this.
+The unpacked plugin can be manually installed from the source in [`Chrome/BearTube`](https://github.com/msolo/BearTube/tree/master/Chrome/BearTube). You may have to visit [`chrome://extensions`](chrome://extensions) and enter Developer Mode to do this.
 
 Sadly, what was once trivial is now on par with the annoyance level of Safari Extensions.
 
