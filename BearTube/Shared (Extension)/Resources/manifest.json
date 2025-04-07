@@ -6,7 +6,7 @@
   ],
   "name": "BearTube",
   "description": "A classic, quiet Youtube.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "icons": {
     "48": "images/icon-48.png",
     "128": "images/icon-128.png"

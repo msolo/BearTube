@@ -66,7 +66,7 @@ function redirect(event) {
         return;
     }
 
-    let dstUrl = "http://beartube.hiredgoons.com/v1/watch.html?v=" + id;
+    let dstUrl = "https://beartube.hiredgoons.com/v1/watch.html?v=" + id;
     btDebug("BearTube redirect tab " + event.tabId + " " + event.url + " -> " + dstUrl);
     chrome.tabs.update(event.tabId, { url: dstUrl });
 }
