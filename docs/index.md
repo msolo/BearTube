@@ -1,4 +1,6 @@
-![Banner](../BearTube/icons/icon-64.svg)
+<img align="right" src="img/Screenshot-iOS.png">
+
+![Banner](BearTube/icons/icon-64.svg)
 
 # BearTube
 
@@ -32,6 +34,11 @@ Sadly, what was once trivial is now on par with the annoyance level of Safari Ex
 # Using BearTube
 
 When BearTube encounters a link to a YouTube watch page, it will redirect the browser to a super-sized embedded version. To view the original page, click the "View Full Page" link above the video.
+
+# Screenshots
+
+<img src="img/Screenshot-MacOS.png">
+
 
 # TODO
 
