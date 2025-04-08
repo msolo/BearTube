@@ -1,8 +1,6 @@
 <img align="right" src="img/Screenshot-iOS.png">
 
-![Banner](BearTube/icons/icon-64.svg)
-
-# BearTube
+<img align="left" src="BearTube/icons/icon-64.svg">
 
 BearTube is a small browser extension to make the drive-by YouTube experience more 2005 than 2025. It puts the video front and center, adhering to the design ethos best expressed by Terry Tate - "condense the nonsense".
 
