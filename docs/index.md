@@ -1,5 +1,6 @@
 <img align="right" src="img/Screenshot-iOS.png">
 
+
 <img align="left" src="BearTube/icons/icon-64.svg">
 
 BearTube is a small browser extension to make the drive-by YouTube experience more 2005 than 2025. It puts the video front and center, adhering to the design ethos best expressed by Terry Tate - "condense the nonsense".
@@ -17,6 +18,8 @@ This is more difficult than many applications due to Apple's security theatre. F
 5. Paste in a link to a youtube video - it should take you to a giant version of the video with nothing else.
 
 ## iOS
+
+There is a [public TestFlight version](https://testflight.apple.com/join/eMPYnaSv) that can be installed.
 
 Once installed and launched, you still need to visit the Safari sections of the Settings > Apps > Safari > Extensions and make sure that BearTube is properly enabled.
 
