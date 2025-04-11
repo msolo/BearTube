@@ -8,7 +8,8 @@
     function onLoad() {
       let url = new URL(document.location);
       let params = new URLSearchParams(url.search);
-      let videoId = params.get("v")
+      let videoId = params.get("v");
+      let playlistId = params.get("list");
       let fixRel = false;
 
       if (videoId == null) {
@@ -16,15 +17,19 @@
         fixRel = true;
       }
 
-      if (videoId != null) {
-        const videoDiv = document.querySelector("#videoDiv");
-        videoDiv.innerHTML = `<iframe style="width: 100%; height: 95dvh;"
-        src="https://www.youtube-nocookie.com/embed/${videoId}?rel=0&iv_load_policy=3"
+      let srcUrl = null
+      if (playlistId != null) {
+        srcUrl = `https://www.youtube-nocookie.com/embed/?listType=playlist&list=${playlistId}`;
+      } else if (videoId != null) {
+        srcUrl = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&iv_load_policy=3`;
+      }
+      const videoDiv = document.querySelector("#videoDiv");
+      videoDiv.innerHTML = `<iframe style="width: 100%; height: 95dvh;"
+        src="${srcUrl}"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>`;
-      }
 
       if (fixRel) {
         // This is some wacky iOS bullshit right here. Without a canonical link,

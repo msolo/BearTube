@@ -17,12 +17,17 @@ const filter = {
 };
 
 function btDebug(msg) {
-    return;
+    // return;
+    console.debug(msg);
+}
+
+function btInfo(msg) {
+    // return;
     console.info(msg);
 }
 
 function init() {
-    btDebug("BearTube init");
+    btInfo("BearTube init");
 
     localStorage["BearTube.enabled"] = true;
     browser.browserAction.getBadgeBackgroundColor({}, (color) => {
@@ -33,11 +38,12 @@ function init() {
 }
 
 function redirect(event) {
-    btDebug("BearTube redirect");
     let enabled = localStorage["BearTube.enabled"];
     if (!enabled) {
-        console.info("BearTube skipping redirect " + event.url);
+        btInfo("BearTube skipping redirect");
         return;
+    } else {
+        btInfo("BearTube redirect " + event.url);
     }
 
     let url = new URL(event.url);
@@ -57,7 +63,7 @@ function redirect(event) {
     }
 
     let dstUrl = "https://beartube.hiredgoons.com/v1/watch.html?v=" + id;
-    btDebug("BearTube redirect tab " + event.tabId + " " + event.url + " -> " + dstUrl);
+    btInfo("BearTube redirecting tab " + event.tabId + " " + event.url + " -> " + dstUrl);
 
     // Safari Bug:
     // When a link is pasted into the Safari omnibox, tabId and frameId are unset.
@@ -89,12 +95,12 @@ browser.webNavigation.onCommitted.addListener((event) => {
 
 browser.webNavigation.onCompleted.addListener((event) => {
     btDebug("BearTube onCompleted");
-    console.table(event);
+    // console.table(event);
 }, filter);
 
 browser.webNavigation.onDOMContentLoaded.addListener((event) => {
     btDebug("BearTube onDOMContentLoaded");
-    console.table(event);
+    // console.table(event);
 }, filter);
 
 browser.runtime.onInstalled.addListener(() => {
@@ -122,7 +128,7 @@ function toggleEnabled(tab) {
         { color: color });
     browser.browserAction.setBadgeText(
         { text: text });
-    console.info("BearTube toggled: " + newState);
+    btInfo("BearTube toggled: " + newState);
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
