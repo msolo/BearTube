@@ -22,7 +22,6 @@ function btDebug(msg) {
 }
 
 function btInfo(msg) {
-    // return;
     console.info(msg);
 }
 
@@ -51,18 +50,14 @@ function redirect(event) {
         // This is our signal we *really* want all of yt.
         return;
     }
-    let id = null;
+    let search = url.search;
     if (url.hostname == "youtu.be") {
-        id = url.pathname.substring(1);
-    }
-    if (id == null) {
-        id = url.searchParams.get("v");
-    }
-    if (id == null) {
-        return;
+        let id = url.pathname.substring(1);
+        url.searchParams.append("v", id);
+        search = "?" + url.searchParams.toString()
     }
 
-    let dstUrl = "https://beartube.hiredgoons.com/v1/watch.html?v=" + id;
+    let dstUrl = "https://beartube.hiredgoons.com/v1/watch.html" + search
     btInfo("BearTube redirecting tab " + event.tabId + " " + event.url + " -> " + dstUrl);
 
     // Safari Bug:

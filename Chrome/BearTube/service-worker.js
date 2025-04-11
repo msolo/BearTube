@@ -19,7 +19,11 @@ const filter = {
 };
 
 function btDebug(msg) {
-    return;
+    // return;
+    console.debug(msg);
+}
+
+function btInfo(msg) {
     console.info(msg);
 }
 
@@ -40,34 +44,31 @@ function init() {
 }
 
 function redirect(event) {
-    btDebug("BearTube redirect");
     loadFull = false;
     let enabled = localStorage["BearTube.enabled"];
     if (!enabled) {
-        console.info("BearTube skipping redirect " + event.url);
+        btInfo("BearTube skipping redirect");
         return;
+    } else {
+        btInfo("BearTube redirect " + event.url);
     }
 
     let url = new URL(event.url);
     if (url.searchParams.get("yt") == "1") {
         // This is our signal we *really* want all of yt.
-        btDebug("BearTube loading full YouTube: " + event.url);
         loadFull = true;
         return;
     }
-    let id = null;
+
+    let search = url.search;
     if (url.hostname == "youtu.be") {
-        id = url.pathname.substring(1);
-    }
-    if (id == null) {
-        id = url.searchParams.get("v");
-    }
-    if (id == null) {
-        return;
+        let id = url.pathname.substring(1);
+        url.searchParams.append("v", id);
+        search = "?" + url.searchParams.toString()
     }
 
-    let dstUrl = "https://beartube.hiredgoons.com/v1/watch.html?v=" + id;
-    btDebug("BearTube redirect tab " + event.tabId + " " + event.url + " -> " + dstUrl);
+    let dstUrl = "https://beartube.hiredgoons.com/v1/watch.html" + search
+    btInfo("BearTube redirecting tab " + event.tabId + " " + event.url + " -> " + dstUrl);
     chrome.tabs.update(event.tabId, { url: dstUrl });
 }
 
@@ -111,6 +112,5 @@ function toggleEnabled(tab) {
         { color: color });
     chrome.browserAction.setBadgeText(
         { text: text });
-
-    console.info("BearTube toggled: " + newState);
+    btInfo("BearTube toggled: " + newState);
 }
