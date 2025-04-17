@@ -1,0 +1,10 @@
+{
+    "extension_name": {
+        "message": "BearTube",
+        "description": "The display name for the extension."
+    },
+    "extension_description": {
+        "message": "A classic, quiet Youtube.",
+        "description": "Description of what the extension does."
+    }
+}

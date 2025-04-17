@@ -108,9 +108,9 @@ function toggleEnabled(tab) {
         text = "";
     }
 
-    chrome.browserAction.setBadgeBackgroundColor(
+    chrome.action.setBadgeBackgroundColor(
         { color: color });
-    chrome.browserAction.setBadgeText(
+    chrome.action.setBadgeText(
         { text: text });
-    btInfo("BearTube toggled: " + newState);
+    btInfo("BearTube toggled, enabled: " + newState);
 }

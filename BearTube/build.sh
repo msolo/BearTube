@@ -2,9 +2,12 @@
 
 
 set -o pipefail
-set -eux
+set -eu
 
 version=$(jq -r .version "Shared (Extension)/Resources/manifest.json")
+
+# Make sure we made some effort to label our releases.
+git tag -v "v$version"
 
 # Normalize versions. There might be a better way.
 sed -i '' -e "s/MARKETING_VERSION = .*;/MARKETING_VERSION = $version;/" ./BearTube.xcodeproj/project.pbxproj

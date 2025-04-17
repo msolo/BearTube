@@ -11,17 +11,19 @@ BearTube is a small browser extension to make the drive-by YouTube experience mo
 
 This is more difficult than many applications due to Apple's security theatre. Follow carefully, you may have to improvise because Apple makes changes to the permission process that are out of my control.
 
-1. Download the application from this link [BearTube.zip](https://github.com/msolo/BearTube/releases/download/v1.0.6/BearTube-1.0.6.zip).
-2. Go to the `Downloads` folder and right click on the BearTube application. Select `Open`. You must launch the application this way. You will get a dialog box asking if you want to allow running the unsigned, untrusted code - yes. You want to do that.
-3. If you see the application load, it will give you a button to quit it and launch Safari's Extension panel instead. It doesn't always work so you may need to go to the Safari Preferences, find the section called `Extensions` and enable the checkbox next to BearTube.
-4. This might still be not enough. Visit youtube.com. You should see a tv icon next to the location bar, if it is not glowing blue, you need to click on the tv icon and select `Always allow on youtube.com`.
-5. Paste in a link to a youtube video - it should take you to a giant version of the video with nothing else.
+1. Download the application from this link [BearTube.zip](https://github.com/msolo/BearTube/releases/download/v1.1.0/BearTube-1.1.0.zip).
+2. Go to the `Downloads` folder and run the application once. You will almost certainly get a superfluous warning about being unable to run an untrustworthy application - just dismiss and ignore this annoyance.
+3. Right-click the BearTube application select `Open`. You *must* relaunch the application this way. You will get a dialog box asking if you want to allow running the unsigned, untrusted code - yes. You want to do that.
+4. The application should now load and it will give you a button to quit it and launch Safari's Extension settings panel instead. It doesn't always work so you may need to go to the Safari Preferences, find the section called `Extensions` and enable the checkbox next to BearTube.
+5. You now need to give BearTube permission to run. Click the `Edit Websites...` button in the settings panel. There is a list of `Configured Websites` - you must set each one to `Allow` for the plugin to work correctly.
+6. Visit youtube.com. You should see a tv icon next to the location bar and it should be sort of tinted blue.
+7. Click a link to a video - it should take you to a giant version of the video with nothing else.
 
 ## iOS
 
 There is a [public TestFlight version](https://testflight.apple.com/join/eMPYnaSv) that can be installed.
 
-Once installed and launched, you still need to visit the Safari sections of the Settings > Apps > Safari > Extensions and make sure that BearTube is properly enabled.
+Once installed and launched, you still need to visit the Safari sections of the `Settings > Apps > Safari > Extensions` and make sure that BearTube is properly enabled.
 
 This is a security "feature" and cannot be automated.
 
@@ -41,7 +43,3 @@ When BearTube encounters a link to a YouTube watch page, it will redirect the br
 <img src="img/Screenshot-MacOS.png">
 
 
-# TODO
-
- * The application is ~330K to deploy 2K of Javascript, but also seems to require 6MB of PNG files to conform to "best practices." Condense nonsense. The Chrome extension is 60K and manages to look decent doing it.
- * Eliminate server side component? The fastest RPC is one that doesn't happen.

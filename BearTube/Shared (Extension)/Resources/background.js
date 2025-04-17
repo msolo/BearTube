@@ -1,8 +1,8 @@
-// We don't need real persistence - a hack will do nicely.
 const localStorage = {
     "BearTube.enabled": true,
     "BearTube.bg-color": "#ff0000",
 };
+
 
 const filter = {
     url: [
@@ -27,9 +27,8 @@ function btInfo(msg) {
 
 function init() {
     btInfo("BearTube init");
-
-    localStorage["BearTube.enabled"] = true;
-    browser.browserAction.getBadgeBackgroundColor({}, (color) => {
+    setEnabled(true);
+    browser.action.getBadgeBackgroundColor({}, (color) => {
         // Store the background color. The docs suggest that "null" will return
         // this to the default, but that doesn't seem to work in any browser.
         localStorage["BearTube.bg-color"] = color;
@@ -109,9 +108,21 @@ browser.runtime.onStartup.addListener(() => {
 });
 
 
+function onError(error) {
+    console.error(error);
+}
+
+function setEnabled(enabled) {
+    let key = "BearTube.enabled";
+    let x = {}
+    x[key] = enabled;
+    browser.storage.local.set(x).then(() => { }, onError);
+    localStorage[key] = enabled;
+}
+
 function toggleEnabled(tab) {
     let newState = !localStorage["BearTube.enabled"];
-    localStorage["BearTube.enabled"] = newState;
+    setEnabled(newState);
     let color = "#000000";
     let text = "off";
     if (newState) {
@@ -119,13 +130,13 @@ function toggleEnabled(tab) {
         text = "";
     }
 
-    browser.browserAction.setBadgeBackgroundColor(
+    browser.action.setBadgeBackgroundColor(
         { color: color });
-    browser.browserAction.setBadgeText(
+    browser.action.setBadgeText(
         { text: text });
-    btInfo("BearTube toggled: " + newState);
+    btInfo("BearTube toggled, enabled: " + newState);
 }
 
-browser.browserAction.onClicked.addListener((tab) => {
+browser.action.onClicked.addListener((tab) => {
     toggleEnabled(tab);
 });
