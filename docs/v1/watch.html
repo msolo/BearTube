@@ -10,6 +10,7 @@
       let params = new URLSearchParams(url.search);
       let videoId = params.get("v");
       let playlistId = params.get("list");
+      let startRadio = params.get("start_radio");
       let fixRel = false;
 
       if (videoId == null) {
@@ -18,7 +19,7 @@
       }
 
       let srcUrl = null
-      if (playlistId != null) {
+      if (playlistId != null && startRadio == null) {
         srcUrl = `https://www.youtube-nocookie.com/embed/?listType=playlist&list=${playlistId}`;
       } else if (videoId != null) {
         srcUrl = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&iv_load_policy=3`;
