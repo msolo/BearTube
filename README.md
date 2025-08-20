@@ -22,7 +22,7 @@ This is more difficult than many applications due to Apple's security theatre. F
 
 ## iOS
 
-The [released version](https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=6744306910) is available on the AppStorel.
+The [released version](https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=6744306910) is available on the AppStore.
 
 There is also [public TestFlight version](https://testflight.apple.com/join/eMPYnaSv) that can be installed.
 
