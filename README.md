@@ -22,11 +22,13 @@ This is more difficult than many applications due to Apple's security theatre. F
 
 ## iOS
 
-There is a [public TestFlight version](https://testflight.apple.com/join/eMPYnaSv) that can be installed.
+The [released version](https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=6744306910) is available on the AppStorel.
+
+There is also [public TestFlight version](https://testflight.apple.com/join/eMPYnaSv) that can be installed.
 
 Once installed and launched, you still need to visit the Safari sections of the `Settings > Apps > Safari > Extensions` and make sure that BearTube is properly enabled.
 
-This is a security "feature" and cannot be automated.
+This is a security "feature" and cannot be automated. You should give the BearTube extension permission to run automatically on the YouTube related domains.
 
 ## Chrome
 
